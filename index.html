@@ -1,21 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="script.js" defer></script>
+    <title>MovieHub – Filmų paieška</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <h1>Filmų paieška</h1>
+    <!-- NAV -->
+    <header class="site-header">
+      <nav class="nav">
+        <a class="logo" href="index.html">MovieHub</a>
+        <div class="nav-links">
+          <a href="index.html" class="active">Pagrindinis</a>
+          <a href="#popular">Populiaru</a>
+          <a href="#about">Apie</a>
+        </div>
+      </nav>
 
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Ieškoti pagal pavadinimą"
-    />
-    <div id="results" class="grid"></div>
-    <p id="status"></p>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Rask filmą per kelias sekundes</h1>
+          <p>
+            Įvesk pavadinimą ir spausk <strong>Enter</strong>. Paspaudus ant
+            kortelės – atsidarys filmo puslapis su aprašymu ir aktoriais.
+          </p>
+
+          <div class="hero-search">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Ieškoti pagal pavadinimą (pvz. Friends, House...)"
+            />
+            <button id="searchBtn" type="button">Ieškoti</button>
+          </div>
+
+          <p class="hint">
+            Tip: jei paliksi mažiau nei 2 simbolius – grąžins visus filmus.
+          </p>
+        </div>
+      </section>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+      <section id="popular" class="section">
+        <div class="section-head">
+          <h2>Filmai</h2>
+          <p id="status" class="status"></p>
+        </div>
+
+        <div id="results" class="grid"></div>
+      </section>
+
+      <section id="about" class="section about">
+        <h2>Apie projektą</h2>
+        <p>
+          Ši svetainė naudoja TVMaze API. Čia yra paieška, filmo detalės ir
+          aktorių peržiūra. Viską galima toliau plėsti (žanrai, sezonai,
+          epizodai ir t.t.).
+        </p>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© <span id="year"></span> MovieHub. Duomenys: TVMaze API.</p>
+    </footer>
+
+    <script>
+      // mažas UX priedas – metai footeryje
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

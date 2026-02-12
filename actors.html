@@ -4,18 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aktoriai</title>
-    <script src="actors.js" defer></script>
     <link rel="stylesheet" href="actors.css" />
+    <script src="actors.js" defer></script>
   </head>
   <body>
-    <h1>Aktoriai</h1>
-    <div class="container">
-      <a id="backLink" href="index.html">Atgal</a>
+    <header class="page-header">
+      <nav class="nav">
+        <a class="logo" href="index.html">MovieHub</a>
+        <div class="nav-links">
+          <a href="index.html">Pagrindinis</a>
+        </div>
+      </nav>
+    </header>
 
+    <main class="container">
+      <a class="back" href="javascript:history.back()">⬅ Atgal</a>
+      <h1>Aktoriai</h1>
       <p id="status" class="loading"></p>
-
-      <!-- Čia JS sudės aktorių korteles -->
       <div id="actors" class="grid"></div>
-    </div>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> MovieHub. TVMaze API.</p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
