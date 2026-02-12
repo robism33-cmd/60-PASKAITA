@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #141414;
+  color: white;
+  padding: 40px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+a {
+  color: #00c3ff;
+  text-decoration: none;
+}
+
+img.poster {
+  width: 300px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.actors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.actor-card {
+  background: #1f1f1f;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.actor-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.loading {
+  color: #00c3ff;
+}
+
+.error {
+  color: red;
+}

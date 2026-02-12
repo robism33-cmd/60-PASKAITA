@@ -1,0 +1,98 @@
+Kas pilnai pasidarėte:
+ Pilnai užbaikite svetainę,
+  pridėkite paprastą navigaciją, 
+  footer ir hero sekcijas, kad puslapis atrodytų
+  panašesnis į tikrą svetainę, 
+  ir isikelkite i Vercel
+
+Today
+
+VilniusCoding School 6:28 PM
+body {
+        font-family: Arial, sans-serif;
+        padding: 40px;
+        background: #141414;
+        color: white;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: auto;
+      }
+
+      img {
+        width: 300px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .loading {
+        color: #00c3ff;
+        font-weight: bold;
+      }
+
+      .error {
+        color: #ff4c4c;
+        font-weight: bold;
+      }
+
+      a {
+        color: #00c3ff;
+        text-decoration: none;
+      }
+Messages addressed to "meeting group chat" will also appear in the meeting group chat in Team Chat
+
+VilniusCoding School 6:39 PM
+"https://api.tvmaze.com/shows/"
+
+VilniusCoding School 6:56 PM
+const detailsDiv = document.getElementById("details");
+const api = "https://api.tvmaze.com/shows/";
+
+// Gaunu prieiga prie narsykles dabartines nuorodos
+const params = new URLSearchParams(window.location.search);
+const movieId = params.get("id");
+
+function getMovieDetails() {
+  fetch(`${api}${movieId}`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      detailsDiv.innerHTML = `
+        <h1>${data.name}</h1>
+        ${data.image ? `<img src="${data.image.original}" alt="nuotrauka">` : ""}
+        <p><strong>Reitingas:</strong> ${data.rating.average ?? "Nera"}</p>
+        <p>${data.summary}</p>
+        `;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+getMovieDetails();
+
+VilniusCoding School 7:19 PM
+const movieCastApi = "https://api.tvmaze.com/shows/:id/cast";
+
+VilniusCoding School 7:20 PM
+const movieCastApi = `https://api.tvmaze.com/shows/${movieId}/cast`;
+
+VilniusCoding School 7:51 PM
+Pasidarykit pertraukele 20:00 - 20:15
+
+VilniusCoding School 8:17 PM
+Ar reikia pagalbos? 🙂
+Darom apsitarima 21:00
+
+Dovile Semaskiene 8:21 PM
+Deja šiandien turiu jau atsijungti. Jei galite ikelkite įrasa bent rytoj. Ačiū
+
+Justina Sakalauskė 8:25 PM
+o reikia, kad visus aktorius atvaizduotu? ar padaryti, kad tik pirmus,tarkim, 10?
+
+VilniusCoding School 9:12 PM
+Kas pilnai pasidarėte: Pilnai užbaikite svetainę, pridėkite paprastą navigaciją, footer ir hero sekcijas, kad puslapis atrodytų panašesnis į tikrą svetainę, ir isikelkite i Vercel
+
+  

@@ -24,6 +24,12 @@ function getAllShows() {
           <img src="${imgSrc}" alt="nuotrauka">
           <h3>Pavadinimas: ${movie.name}<br>Reitingas: ${rating}</h3>
         `;
+
+        // ✅ TIK vienas redirect (į details)
+        div.addEventListener("click", () => {
+          window.location.href = `details.html?filmas=${movie.id}`;
+        });
+
         resultsDiv.appendChild(div);
       });
 
@@ -76,6 +82,12 @@ function searchShowsByName(value) {
           <img src="${imgSrc}" alt="nuotrauka">
           <h3>Pavadinimas: ${movie.name}<br>Reitingas: ${rating}</h3>
         `;
+
+        // ✅ TIK vienas redirect (į details)
+        div.addEventListener("click", () => {
+          window.location.href = `details.html?filmas=${movie.id}`;
+        });
+
         resultsDiv.appendChild(div);
       });
 
